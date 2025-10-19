@@ -27,24 +27,28 @@ const News: React.FC = () => {
   ];
 
   return (
-    <div className="news-page container">
-      <div className="page-header">
-        <h1>News & Updates</h1>
-      </div>
-      <div className="news-grid">
-        {newsItems.map((item, index) => (
-          <div key={index} className="news-card">
-            <img src={item.image} alt={item.title} className="news-image" />
-            <div className="news-content">
-              <span className="news-date">{item.date}</span>
-              <h3>{item.title}</h3>
-              <p>{item.excerpt}</p>
-              <a href="#" className="read-more-btn">
-                Read More
-              </a>
-            </div>
+    <div className="news-page">
+      <div className="container">
+        <div className="page-header">
+          <h1>News & Updates</h1>
+        </div>
+        <div className="news-section">
+          <div className="news-grid">
+            {newsItems.map((item, index) => (
+              <div key={index} className="news-card">
+                <img src={item.image} alt={item.title} className="news-image" />
+                <div className="news-content">
+                  <span className="news-date">{item.date}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
+                  <a href="#" className="read-more-btn">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

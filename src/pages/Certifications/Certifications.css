@@ -1,249 +1,249 @@
 .certifications-page {
-    background: var(--surface);
-    min-height: 100vh;
+  background: var(--surface);
+  min-height: 100vh;
 }
 
 .certifications-hero {
-    background: #345AA9;
-    color: #FFFFFF;
-    padding: 80px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  background: #345aa9;
+  color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .certifications-hero .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .certifications-hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #FFFFFF;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .certifications-hero p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto;
-    opacity: 0.95;
-    line-height: 1.6;
-    color: #FFFFFF;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
 .certifications-intro {
-    padding: 80px 0;
-    background: var(--surface);
-    text-align: center;
+  padding: 80px 0;
+  background: var(--surface);
+  text-align: center;
 }
 
 .intro-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: var(--background);
-    padding: 50px;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--background);
+  padding: 50px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
 }
 
 .intro-icon {
-    font-size: 5rem;
-    color: var(--color-primary);
-    flex-shrink: 0;
-    background: rgba(52, 90, 169, 0.1);
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(52, 90, 169, 0.2);
+  font-size: 5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  background: rgba(52, 90, 169, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(52, 90, 169, 0.2);
 }
 
 .intro-content p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: var(--text-primary);
-    margin: 0;
-    text-align: left;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: left;
 }
 
 .certifications-showcase {
-    padding: 60px 0;
-    background: var(--background);
+  padding: 60px 0;
 }
 
 .certifications-showcase h2 {
-    font-size: 2.5rem;
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 50px;
-    font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 600;
 }
 
 .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .cert-card {
-    background: var(--surface);
-    padding: 40px;
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  background: var(--surface);
+  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .cert-icon {
-    font-size: 3rem;
-    color: var(--color-primary);
-    margin-bottom: 20px;
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
 }
 
 .cert-card h3 {
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-    font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .cert-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 .quality-commitment {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .commitment-content h2 {
-    font-size: 2.5rem;
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .commitment-content > p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 50px;
-    color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: var(--text-primary);
 }
 
 .commitment-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .feature-item {
-    background: var(--surface);
-    padding: 25px;
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--color-primary);
-    transition: transform var(--transition-speed) ease;
+  background: var(--surface);
+  padding: 25px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--color-primary);
+  transition: transform var(--transition-speed) ease;
 }
 
 .feature-item:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .feature-item strong {
-    display: block;
-    color: var(--color-primary);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  display: block;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .feature-item p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 @media (max-width: 992px) {
-    .certifications-hero h1 {
-        font-size: 2.5rem;
-    }
+  .certifications-hero h1 {
+    font-size: 2.5rem;
+  }
 
-    .certifications-hero p {
-        font-size: 1.1rem;
-    }
+  .certifications-hero p {
+    font-size: 1.1rem;
+  }
 
-    .intro-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 40px 30px;
-    }
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 30px;
+  }
 
-    .intro-icon {
-        font-size: 4rem;
-    }
+  .intro-icon {
+    font-size: 4rem;
+  }
 
-    .intro-content p {
-        text-align: center;
-        font-size: 1.1rem;
-    }
+  .intro-content p {
+    text-align: center;
+    font-size: 1.1rem;
+  }
 
-    .cert-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 
-    .commitment-features {
-        grid-template-columns: 1fr;
-    }
+  .commitment-features {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-    .certifications-hero {
-        padding: 60px 0;
-    }
+  .certifications-hero {
+    padding: 60px 0;
+  }
 
-    .certifications-hero h1 {
-        font-size: 2rem;
-    }
+  .certifications-hero h1 {
+    font-size: 2rem;
+  }
 
-    .certifications-intro,
-    .certifications-showcase,
-    .quality-commitment {
-        padding: 40px 0;
-    }
+  .certifications-intro,
+  .certifications-showcase,
+  .quality-commitment {
+    padding: 40px 0;
+  }
 
-    .certifications-showcase h2,
-    .commitment-content h2 {
-        font-size: 2rem;
-    }
+  .certifications-showcase h2,
+  .commitment-content h2 {
+    font-size: 2rem;
+  }
 
-    .cert-card {
-        padding: 30px 20px;
-    }
+  .cert-card {
+    padding: 30px 20px;
+  }
 
-    .intro-icon {
-        font-size: 3rem;
-    }
+  .intro-icon {
+    font-size: 3rem;
+  }
 
-    .intro-content {
-        padding: 30px 20px;
-    }
+  .intro-content {
+    padding: 30px 20px;
+  }
 }

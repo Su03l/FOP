@@ -1,6 +1,16 @@
+.news-page {
+  background: var(--surface);
+  min-height: 100vh;
+}
+
 .news-page .page-header {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding: 80px 0;
+}
+
+.news-section {
+  padding: 80px 0;
 }
 
 .news-grid {
