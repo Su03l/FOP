@@ -1,0 +1,100 @@
+import React, { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useTheme } from '../../context/ThemeContext';
+import { useLanguage } from '../../context/LanguageContext';
+import LightMode from '@mui/icons-material/LightMode';
+import DarkMode from '@mui/icons-material/DarkMode';
+import Language from '@mui/icons-material/Language';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import './Navbar.css';
+import LightLogo from '../../assets/images/banners/LOGO-26.png';
+import DarkLogo from '../../assets/images/banners/LOGO-31.png';
+
+const Navbar: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const logoSrc = theme === 'light' ? LightLogo : DarkLogo;
+
+  const navLinks = [
+    { path: '/', en: 'Home', ar: 'الرئيسية' },
+    { path: '/about', en: 'About Us', ar: 'من نحن' },
+    { path: '/products', en: 'Products', ar: 'المنتجات' },
+    { path: '/order', en: 'Order', ar: 'الطلب' },
+    { path: '/certifications', en: 'Quality', ar: 'الجودة' },
+    { path: '/industries', en: 'Industries', ar: 'الصناعات' },
+    { path: '/news', en: 'News', ar: 'الأخبار' },
+    { path: '/contact', en: 'Contact', ar: 'اتصل بنا' },
+  ];
+
+  return (
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="navbar-container">
+        <div className="navbar-logo" onClick={() => navigate('/')}>
+          <img src={logoSrc} alt="FOP Logo" />
+          <div className="logo-text">
+            <span style={{ fontSize: '15px' }}>Foundations of Prevention</span>
+            <span>أسس الوقاية</span>
+          </div>
+        </div>
+
+        <div className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}>
+          {navLinks.map((link) => (
+            <li key={link.path} className="nav-item">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {language === 'en' ? link.en : link.ar}
+              </NavLink>
+            </li>
+          ))}
+          <div className="mobile-menu-actions">
+            <button onClick={() => { toggleTheme(); setMobileMenuOpen(false); }} className="mobile-theme-toggle">
+              {theme === 'light' ? <DarkMode /> : <LightMode />}
+              <span>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+            </button>
+            <button onClick={() => { toggleLanguage(); setMobileMenuOpen(false); }} className="mobile-language-toggle">
+              <Language />
+              <span>{language === 'en' ? 'العربية' : 'English'}</span>
+            </button>
+          </div>
+        </div>
+
+        <div className="nav-actions">
+          <button onClick={toggleTheme} className="theme-toggle-btn">
+            {theme === 'light' ? <DarkMode /> : <LightMode />}
+          </button>
+          <button onClick={toggleLanguage} className="language-toggle-btn">
+            <Language />
+            <span>{language === 'en' ? 'AR' : 'EN'}</span>
+          </button>
+          <button className="quote-btn" onClick={() => navigate('/contact')}>Get a Quote</button>
+
+          <button className="hamburger-btn" onClick={toggleMobileMenu}>
+            {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

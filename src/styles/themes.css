@@ -1,0 +1,18 @@
+/* Default to light theme */
+body {
+  --background: var(--color-background-light);
+  --text-primary: var(--color-text-light);
+  --surface: var(--color-surface-light);
+  --border: var(--color-border-light);
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Dark theme overrides */
+body[data-theme='dark'] {
+  --background: var(--color-background-dark);
+  --text-primary: var(--color-text-dark);
+  --surface: var(--color-surface-dark);
+  --border: var(--color-border-dark);
+}

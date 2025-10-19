@@ -1,0 +1,100 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--background);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-lg);
+}
+
+.modal-product-image img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    background-color: #f0f0f0;
+}
+
+.modal-product-details h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.modal-product-details h3 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-product-details ul {
+    list-style: inside;
+    padding-left: var(--spacing-md);
+}
+
+.modal-product-details table {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    border-collapse: collapse;
+}
+
+.modal-product-details table td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-product-details table td:first-child {
+    font-weight: bold;
+}
+
+.btn-add-to-quote {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.btn-add-to-quote:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+}
