@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 import { productsData, type Product } from "../../utils/productsData";
 import ProductModal from "./ProductModal";
 import "./Products.css";
 
 const Products: React.FC = () => {
+  const { translate } = useLanguage();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedColor, setSelectedColor] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -16,7 +18,20 @@ const Products: React.FC = () => {
     setSelectedProduct(null);
   };
 
-  const colors = ["All", ...Array.from(new Set(productsData.map(p => p.colour)))];
+  const colors = ["All", "Orange", "Red", "Green", "Blue", "Yellow", "White"];
+
+  const getTranslatedColor = (color: string) => {
+    const colorMap: { [key: string]: string } = {
+      "All": translate('colorAll'),
+      "Orange": translate('colorOrange'),
+      "Red": translate('colorRed'),
+      "Green": translate('colorGreen'),
+      "Blue": translate('colorBlue'),
+      "Yellow": translate('colorYellow'),
+      "White": translate('colorWhite')
+    };
+    return colorMap[color] || color;
+  };
 
   const filteredProducts = productsData.filter(product => {
     const matchesColor = selectedColor === "All" || product.colour === selectedColor;
@@ -30,21 +45,21 @@ const Products: React.FC = () => {
     <div className="products-page">
       <div className="products-hero">
         <div className="container">
-          <h1>Explore Our Safety Helmet Range</h1>
-          <p>Discover our comprehensive collection of industrial safety helmets designed for maximum protection and comfort in demanding work environments.</p>
+          <h1>{translate('productsHeroTitle')}</h1>
+          <p>{translate('productsHeroSubtitle')}</p>
         </div>
       </div>
 
       <div className="container">
         <div className="products-layout">
           <aside className="products-sidebar">
-            <h3>Filter Products</h3>
+            <h3>{translate('filterProducts')}</h3>
 
             <div className="filter-section">
-              <h4>Search by Name</h4>
+              <h4>{translate('searchByName')}</h4>
               <input
                 type="text"
-                placeholder="Search by product name or FOP ID..."
+                placeholder={translate('searchPlaceholder')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
@@ -52,7 +67,7 @@ const Products: React.FC = () => {
             </div>
 
             <div className="filter-section">
-              <h4>Filter by Color</h4>
+              <h4>{translate('filterByColor')}</h4>
               <div className="filter-options">
                 {colors.map((color) => (
                   <label key={color} className="filter-option">
@@ -63,7 +78,7 @@ const Products: React.FC = () => {
                       checked={selectedColor === color}
                       onChange={(e) => setSelectedColor(e.target.value)}
                     />
-                    {color}
+                    {getTranslatedColor(color)}
                   </label>
                 ))}
               </div>
@@ -76,12 +91,12 @@ const Products: React.FC = () => {
                 setSelectedColor("All");
               }}
             >
-              Reset Filters
+              {translate('resetFilters')}
             </button>
           </aside>
 
           <section className="products-showcase">
-            <h2>Our Helmet Collection ({filteredProducts.length} products)</h2>
+            <h2>{translate('ourHelmetCollection')} ({filteredProducts.length} )</h2>
             <div className="products-grid-container">
               {filteredProducts.map((product) => (
                 <div
@@ -97,13 +112,13 @@ const Products: React.FC = () => {
                   <div className="product-info">
                     <h3>{product.productId}</h3>
                     <div className="product-details">
-                      <p><strong>FOP ID:</strong> {product.fopId}</p>
-                      <p><strong>Suspension:</strong> {product.suspensionType}</p>
-                      <p><strong>Sweatband:</strong> {product.sweatband}</p>
-                      <p><strong>Color:</strong> {product.colour}</p>
-                      <p><strong>MOQ:</strong> {product.moq}</p>
+                      <p><strong>{translate('fopNumber')}:</strong> {product.fopId}</p>
+                      <p><strong>{translate('suspensionType')}:</strong> {product.suspensionType}</p>
+                      <p><strong>{translate('sweatband')}:</strong> {product.sweatband}</p>
+                      <p><strong>{translate('color')}:</strong> {product.colour}</p>
+                      <p><strong>{translate('minOrder')}:</strong> {product.moq}</p>
                     </div>
-                    <button className="btn-view-details">View Details</button>
+                    <button className="btn-view-details">{translate('viewDetails')}</button>
                   </div>
                 </div>
               ))}

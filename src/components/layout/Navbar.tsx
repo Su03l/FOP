@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { language, toggleLanguage } = useLanguage();
+  const { language, toggleLanguage, translate } = useLanguage();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,14 +33,14 @@ const Navbar: React.FC = () => {
   const logoSrc = theme === 'light' ? LightLogo : DarkLogo;
 
   const navLinks = [
-    { path: '/', en: 'Home', ar: 'الرئيسية' },
-    { path: '/about', en: 'About Us', ar: 'من نحن' },
-    { path: '/products', en: 'Products', ar: 'المنتجات' },
-    { path: '/order', en: 'Order', ar: 'الطلب' },
-    { path: '/certifications', en: 'Quality', ar: 'الجودة' },
-    { path: '/industries', en: 'Industries', ar: 'الصناعات' },
-    { path: '/news', en: 'News', ar: 'الأخبار' },
-    { path: '/contact', en: 'Contact', ar: 'اتصل بنا' },
+    { path: '/', key: 'home' },
+    { path: '/about', key: 'about' },
+    { path: '/products', key: 'products' },
+    { path: '/order', key: 'ordering' },
+    { path: '/certifications', key: 'certifications' },
+    { path: '/industries', key: 'industries' },
+    { path: '/news', key: 'news' },
+    { path: '/contact', key: 'contact' },
   ];
 
   return (
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-logo" onClick={() => navigate('/')}>
           <img src={logoSrc} alt="FOP Logo" />
           <div className="logo-text">
-            <span style={{ fontSize: '15px' }}>Foundations of Prevention</span>
+            <span style={{ fontSize: '15px' }}>{translate('homeTitle')}</span>
             <span>أسس الوقاية</span>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 className={({ isActive }) => `nav-links ${isActive ? 'active' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {language === 'en' ? link.en : link.ar}
+                {translate(link.key)}
               </NavLink>
             </li>
           ))}
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             <Language />
             <span>{language === 'en' ? 'AR' : 'EN'}</span>
           </button>
-          <button className="quote-btn" onClick={() => navigate('/contact')}>Get a Quote</button>
+          <button className="quote-btn" onClick={() => navigate('/contact')}>{translate('getAQuote')}</button>
 
           <button className="hamburger-btn" onClick={toggleMobileMenu}>
             {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}

@@ -1,28 +1,31 @@
 import React from "react";
 import BusinessIcon from '@mui/icons-material/Business';
 import SecurityIcon from '@mui/icons-material/Security';
+import { useLanguage } from "../../context/LanguageContext";
 import "./Industries.css";
 
 const Industries: React.FC = () => {
+  const { translate } = useLanguage();
+
   const industries = [
     {
-      name: "Construction",
-      description: "Reliable protection for engineers, supervisors, and workers on active job sites.",
+      name: translate("constructionTitle"),
+      description: translate("constructionDesc"),
       image: "https://via.placeholder.com/400x250/construction",
     },
     {
-      name: "Oil & Gas",
-      description: "Resistant to high temperatures and chemical exposure.",
+      name: translate("oilGasTitle"),
+      description: translate("oilGasDesc"),
       image: "https://via.placeholder.com/400x250/oilgas",
     },
     {
-      name: "Manufacturing & Industrial",
-      description: "Lightweight helmets for 24/7 plant operations.",
+      name: translate("manufacturingTitle"),
+      description: translate("manufacturingDesc"),
       image: "https://via.placeholder.com/400x250/manufacturing",
     },
     {
-      name: "Utilities & Maintenance",
-      description: "Electrical insulation and high-visibility options available.",
+      name: translate("utilitiesTitle"),
+      description: translate("utilitiesDesc"),
       image: "https://via.placeholder.com/400x250/utilities",
     },
   ];
@@ -31,8 +34,8 @@ const Industries: React.FC = () => {
     <div className="industries-page">
       <div className="industries-hero">
         <div className="container">
-          <h1>Safety Solutions Tailored for Every Industry</h1>
-          <p>Our helmets are designed to meet the specific demands of various industrial sectors, ensuring optimal protection and compliance.</p>
+          <h1>{translate("safetySolutionsTitle")}</h1>
+          <p>{translate("safetySolutionsSubtitle")}</p>
         </div>
       </div>
 
@@ -41,19 +44,19 @@ const Industries: React.FC = () => {
           <div className="features-grid">
             <div className="feature-card">
               <BusinessIcon className="feature-icon" />
-              <h3>Industry-Specific Design</h3>
-              <p>Customized solutions for construction, oil & gas, manufacturing, and utilities sectors.</p>
+              <h3>{translate("industryDesignTitle")}</h3>
+              <p>{translate("industryDesignDesc")}</p>
             </div>
             <div className="feature-card">
               <SecurityIcon className="feature-icon" />
-              <h3>Regulatory Compliance</h3>
-              <p>Meets all relevant safety standards and certifications for your industry requirements.</p>
+              <h3>{translate("regulatoryComplianceTitle")}</h3>
+              <p>{translate("regulatoryComplianceDesc")}</p>
             </div>
           </div>
         </section>
 
         <section className="industries-showcase">
-          <h2>Industries We Serve</h2>
+          <h2>{translate("industriesWeServeTitle")}</h2>
           <div className="industries-grid">
             {industries.map((industry, index) => (
               <div key={index} className="industry-card">
