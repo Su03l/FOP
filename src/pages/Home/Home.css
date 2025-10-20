@@ -5,19 +5,45 @@
 
 .home-hero {
   background: url("../../assets/images/banners/bg-home.jpeg") no-repeat center
-    center/cover;
+    center;
+  background-size: cover;
   color: var(--text-primary);
-  padding: 300px 0 250px; /* Reduced top padding to start below navbar */
+  padding: 120px 0 100px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Optional: dark overlay for better text readability */
+  z-index: 1;
+}
+
+.home-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .home-hero h1 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--color-primary);
+  color: var(--color-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .home-hero p {
@@ -26,7 +52,8 @@
   margin: 0 auto 40px;
   opacity: 0.95;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--color-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons {
@@ -63,13 +90,13 @@
 
 .btn-secondary {
   background: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .btn-secondary:hover {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -115,7 +142,6 @@
 
 .home-products-section {
   padding: 80px 0;
-
   text-align: center;
   border-radius: 10px;
 }
@@ -264,8 +290,19 @@
   margin: 0;
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .home-hero h1 {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 992px) {
+  .home-hero {
+    min-height: 80vh;
+    padding: 100px 0 80px;
+  }
+
   .home-hero h1 {
     font-size: 2.5rem;
   }
@@ -286,16 +323,31 @@
 
 @media (max-width: 768px) {
   .home-hero {
-    padding: 60px 0;
+    min-height: 70vh;
+    padding: 80px 0 60px;
   }
 
   .home-hero h1 {
     font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .home-hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 
   .home-about-section,
@@ -323,5 +375,40 @@
     padding: 25px 20px;
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    min-height: 60vh;
+    padding: 60px 0 40px;
+  }
+
+  .home-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-hero p {
+    font-size: 0.9rem;
+  }
+
+  .home-hero .container {
+    padding: 0 15px;
+  }
+}
+
+/* Fallback for background image */
+@media (max-width: 768px) {
+  .home-hero {
+    background: url("../../assets/images/banners/bg-home-mobile.jpeg") no-repeat
+      center center;
+    background-size: cover;
+  }
+
+  /* If mobile-specific image doesn't exist, use the original */
+  .home-hero {
+    background: url("../../assets/images/banners/bg-home.jpeg") no-repeat center
+      center;
+    background-size: cover;
   }
 }
