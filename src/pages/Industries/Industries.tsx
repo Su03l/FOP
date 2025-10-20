@@ -1,6 +1,6 @@
 import React from "react";
-import BusinessIcon from '@mui/icons-material/Business';
-import SecurityIcon from '@mui/icons-material/Security';
+import BusinessIcon from "@mui/icons-material/Business";
+import SecurityIcon from "@mui/icons-material/Security";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Industries.css";
 
@@ -11,22 +11,22 @@ const Industries: React.FC = () => {
     {
       name: translate("constructionTitle"),
       description: translate("constructionDesc"),
-      image: "https://via.placeholder.com/400x250/construction",
+      image: "",
     },
     {
       name: translate("oilGasTitle"),
       description: translate("oilGasDesc"),
-      image: "https://via.placeholder.com/400x250/oilgas",
+      image: "",
     },
     {
       name: translate("manufacturingTitle"),
       description: translate("manufacturingDesc"),
-      image: "https://via.placeholder.com/400x250/manufacturing",
+      image: "",
     },
     {
       name: translate("utilitiesTitle"),
       description: translate("utilitiesDesc"),
-      image: "https://via.placeholder.com/400x250/utilities",
+      image: "",
     },
   ];
 
