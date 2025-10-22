@@ -5,7 +5,7 @@ import BusinessIcon from "@mui/icons-material/Business";
 import SecurityIcon from "@mui/icons-material/Security";
 import ScienceIcon from "@mui/icons-material/Science";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
-import whiteHelmet from "../../assets/images/helmets/helmet-white.png";
+import whiteHelmet from "../../assets/images/helmets/white-helmet.png";
 import redHelmet from "../../assets/images/helmets/red-helmet.png";
 import yellowHelmet from "../../assets/images/helmets/yellow-helmet.png";
 import "./Home.css";

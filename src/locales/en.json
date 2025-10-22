@@ -295,8 +295,9 @@
   "formPhone": "Phone Number",
   "formMessage": "Message *",
   "formPlaceholder": "Tell us about your safety requirements...",
-  "formSubmit": "Send Message"
+  "formSubmit": "Send Message",
+
+  "callUs": "Call Us",
+  "whatsapp": "WhatsApp",
+  "sendEmail": "Send Email"
 }
-
-
-

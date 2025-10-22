@@ -1,9 +1,9 @@
-import helmetWhite from "../assets/images/helmets/helmet-white.png";
 import blueHelmet from "../assets/images/helmets/blue-helmet.png";
 import greenHelmet from "../assets/images/helmets/green-helmet.png";
+import orangeHelmet from "../assets/images/helmets/orange-helmet.png";
 import redHelmet from "../assets/images/helmets/red-helmet.png";
+import whiteHelmet from "../assets/images/helmets/white-helmet.png";
 import yellowHelmet from "../assets/images/helmets/yellow-helmet.png";
-
 export interface Product {
   fopId: string;
   productId: string;
@@ -22,7 +22,7 @@ export const productsData: Product[] = [
     sweatband: "Plastic",
     colour: "Orange",
     moq: 20,
-    image: redHelmet, // Using red as orange placeholder
+    image: orangeHelmet, // Using red as orange placeholder
   },
   {
     fopId: "FOP1002",
@@ -67,7 +67,7 @@ export const productsData: Product[] = [
     sweatband: "Plastic",
     colour: "White",
     moq: 20,
-    image: helmetWhite,
+    image: whiteHelmet,
   },
   {
     fopId: "FOP1007",
@@ -76,7 +76,7 @@ export const productsData: Product[] = [
     sweatband: "Leather",
     colour: "White",
     moq: 20,
-    image: helmetWhite,
+    image: whiteHelmet,
   },
   {
     fopId: "FOP1008",

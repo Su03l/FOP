@@ -309,6 +309,9 @@
   "formPhone": "رقم الهاتف",
   "formMessage": "الرسالة *",
   "formPlaceholder": "أخبرنا عن متطلباتك في مجال السلامة...",
-  "formSubmit": "إرسال الرسالة"
-}
+  "formSubmit": "إرسال الرسالة",
 
+  "callUs": "اتصل بنا",
+  "whatsapp": "واتساب",
+  "sendEmail": "أرسل بريد إلكتروني"
+}

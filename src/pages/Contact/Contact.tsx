@@ -34,21 +34,51 @@ const Contact: React.FC = () => {
                 <PhoneIcon className="info-icon" />
                 <div>
                   <strong>{translate("contactPhoneLabel")}</strong>
-                  <p>{translate("contactPhoneValue")}</p>
+                  <div className="dropdown-container">
+                    <p className="contact-link">
+                      {translate("contactPhoneValue")}
+                    </p>
+                    <div className="dropdown-content">
+                      <a href="tel:+9665XXXXXXX">{translate("callUs")}</a>
+                      <a
+                        href="https://wa.me/9665XXXXXXX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {translate("whatsapp")}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="info-item">
                 <EmailIcon className="info-icon" />
                 <div>
                   <strong>{translate("contactEmailLabel")}</strong>
-                  <p>{translate("contactEmailValue")}</p>
+                  <div className="dropdown-container">
+                    <p className="contact-link">
+                      {translate("contactEmailValue")}
+                    </p>
+                    <div className="dropdown-content">
+                      <a href="mailto:info@fop.com.sa">
+                        {translate("sendEmail")}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="info-item">
                 <LanguageIcon className="info-icon" />
                 <div>
                   <strong>{translate("contactWebsiteLabel")}</strong>
-                  <p>{translate("contactWebsiteValue")}</p>
+                  <a
+                    href="http://www.fop.com.sa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
+                    {translate("contactWebsiteValue")}
+                  </a>
                 </div>
               </div>
             </div>
