@@ -11,22 +11,26 @@ const Industries: React.FC = () => {
     {
       name: translate("constructionTitle"),
       description: translate("constructionDesc"),
-      image: "",
+      image:
+        "https://vid.alarabiya.net/images/2021/03/13/038b64c8-0dab-474c-9bb4-5b93d714cdb6/038b64c8-0dab-474c-9bb4-5b93d714cdb6_16x9_1200x676.jpg?width=555&format=jpg",
     },
     {
       name: translate("oilGasTitle"),
       description: translate("oilGasDesc"),
-      image: "",
+      image:
+        "https://www.g4s.com/ar-sa/-/media/g4s/saudiarabia/images/oil--gas.ashx",
     },
     {
       name: translate("manufacturingTitle"),
       description: translate("manufacturingDesc"),
-      image: "",
+      image:
+        "https://cdn.arabsstock.com/uploads/images/166441/engineering-professions-and-jobs-productive-thumbnail-166441.webp",
     },
     {
       name: translate("utilitiesTitle"),
       description: translate("utilitiesDesc"),
-      image: "",
+      image:
+        "https://esi.edu.sa/wp-content/uploads/2021/12/7336bc23d9822d68fa4c08d4de41c80b0fff38de.jpg",
     },
   ];
 

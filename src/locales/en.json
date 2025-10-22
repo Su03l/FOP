@@ -299,5 +299,11 @@
 
   "callUs": "Call Us",
   "whatsapp": "WhatsApp",
-  "sendEmail": "Send Email"
+  "sendEmail": "Send Email",
+  
+  
+  "orderTitle": "Order Here",
+  "orderSubtitle": "Choose how you'd like to contact us to place your order.",
+  "orderNowTitle": "Order Now",
+  "orderNowSubtitle": "You can reach us via phone or email."
 }

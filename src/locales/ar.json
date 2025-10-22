@@ -101,6 +101,8 @@
   "footerContactTitle": "معلومات الاتصال",
   "footerAddress": "المدينة الصناعية الجديدة، المدينة المنورة، المملكة العربية السعودية",
   "footerPhone": "+966-5-XXXXXXX",
+  "footerEmail": "info@fop.com.sa",
+  "footerWebsite": "fop.com.sa",
   "footerFollowUs": "تابعنا",
   "aboutHeroTitle": "حول أسس الوقاية FOP",
   "aboutHeroSubtitle": "قيادة الطريق في السلامة الصناعية مع الابتكار السعودي والجودة غير المتنازلة.",
@@ -313,5 +315,9 @@
 
   "callUs": "اتصل بنا",
   "whatsapp": "واتساب",
-  "sendEmail": "أرسل بريد إلكتروني"
+  "sendEmail": "أرسل بريد إلكتروني",
+  "orderTitle": "اطلب هنا",
+  "orderSubtitle": "اختر الطريقة المناسبة للتواصل معنا لتقديم طلبك.",
+  "orderNowTitle": "قدّم طلبك الآن",
+  "orderNowSubtitle": "يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني."
 }

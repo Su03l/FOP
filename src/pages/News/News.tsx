@@ -39,7 +39,6 @@ const News: React.FC = () => {
           <div className="news-grid">
             {newsItems.map((item, index) => (
               <div key={index} className="news-card">
-                <img src={item.image} alt={item.title} className="news-image" />
                 <div className="news-content">
                   <span className="news-date">{item.date}</span>
                   <h3>{item.title}</h3>
