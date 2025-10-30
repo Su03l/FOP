@@ -7,7 +7,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import "./Contact.css";
 
 const Contact: React.FC = () => {
-  const { translate } = useLanguage();
+  const { translate, language } = useLanguage();
   // Hover states for contact info section
   const [showPhoneInfo, setShowPhoneInfo] = useState(false);
   const [showEmailInfo, setShowEmailInfo] = useState(false);
@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
   const [showPhoneOrder, setShowPhoneOrder] = useState(false);
   const [showEmailOrder, setShowEmailOrder] = useState(false);
 
-  const phoneNumber = "+9665XXXXXXX";
+  const phoneNumber = "+966530005645";
   const emailAddress = "info@fop.com.sa";
 
   // Clean phone number for WhatsApp (remove all non-digits)
@@ -57,7 +57,13 @@ const Contact: React.FC = () => {
                     onMouseLeave={() => setShowPhoneInfo(false)}
                   >
                     <button className="contact-link">
-                      {translate("contactPhoneValue")}
+                      {language === 'ar' ? (
+                        <span dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>
+                          {translate("contactPhoneValue")}
+                        </span>
+                      ) : (
+                        translate("contactPhoneValue")
+                      )}
                     </button>
                     {showPhoneInfo && (
                       <div className="dropdown-content">
@@ -128,7 +134,13 @@ const Contact: React.FC = () => {
                   className="btn-submit"
                   onClick={() => setShowPhoneOrder(!showPhoneOrder)}
                 >
-                  {translate("contactPhoneLabel")}
+                  {language === 'ar' ? (
+                    <span dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>
+                      {translate("contactPhoneLabel")}
+                    </span>
+                  ) : (
+                    translate("contactPhoneLabel")
+                  )}
                 </button>
                 {showPhoneOrder && (
                   <div

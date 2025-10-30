@@ -10,7 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import './Footer.css';
 
 const Footer: React.FC = () => {
-  const { translate } = useLanguage();
+  const { translate, language } = useLanguage();
 
   return (
     <footer className="footer">
@@ -36,7 +36,13 @@ const Footer: React.FC = () => {
           </div>
           <div className="contact-item">
             <PhoneIcon className="contact-icon" />
-            <span>{translate('footerPhone')}</span>
+            {language === 'ar' ? (
+              <span dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>
+                {translate('footerPhone')}
+              </span>
+            ) : (
+              <span>{translate('footerPhone')}</span>
+            )}
           </div>
           <div className="contact-item">
             <EmailIcon className="contact-icon" />

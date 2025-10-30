@@ -8,8 +8,8 @@ import Language from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css';
-import LightLogo from '../../assets/images/banners/LOGO-26.png';
-import DarkLogo from '../../assets/images/banners/LOGO-31.png';
+import LogoSrc from '../../assets/images/banners/LOGO-13.png'
+
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const logoSrc = theme === 'light' ? LightLogo : DarkLogo;
+ 
 
   const navLinks = [
     { path: '/', key: 'home' },
@@ -47,11 +47,7 @@ const Navbar: React.FC = () => {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => navigate('/')}>
-          <img src={logoSrc} alt="FOP Logo" />
-          <div className="logo-text">
-            <span style={{ fontSize: '15px' }}>{translate('homeTitle')}</span>
-            <span>أسس الوقاية</span>
-          </div>
+          <img src={LogoSrc} alt="FOP Logo" />
         </div>
 
         <div className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}>

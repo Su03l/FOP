@@ -92,13 +92,15 @@
 }
 
 .navbar-logo img {
-    height: 60px;
-    margin-right: 10px;
+    height: 160px;
+    width: 200px;
+    margin-right: 18px;
     transition: height var(--transition-speed) ease;
 }
 
 .navbar--scrolled .navbar-logo img {
-    height: 35px;
+    height: 60px;
+    max-width: 120px;
 }
 
 .logo-text {
@@ -143,6 +145,7 @@
 .nav-item {
     height: 80px;
     transition: height var(--transition-speed) ease;
+    font-size: 0.93rem; /* Made font smaller */
 }
 
 .nav-menu--open .nav-item {
@@ -170,7 +173,7 @@
 .nav-links::after {
     content: '';
     position: absolute;
-    bottom: 20px; 
+    bottom: 20px;
     left: 50%;
     width: 0;
     height: 2px; 
@@ -179,9 +182,10 @@
     transform: translateX(-50%);
 }
 
+/* Remove underline on hover, only color */
 .nav-links:hover::after,
 .nav-links.active::after {
-    width: 90%;
+    width: 0;
 }
 
 .nav-links:hover {
@@ -212,12 +216,12 @@
 
 .nav-menu--open .nav-links:hover::after,
 .nav-menu--open .nav-links.active::after {
-    width: 100%;
+    width: 0;
 }
 
 .nav-menu--open .nav-links:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: none;
+    color: var(--color-primary);
 }
 
 .nav-menu--open .nav-links.active {
@@ -379,10 +383,12 @@
     }
 
     .navbar-logo img {
-        height: 35px;
+        height: 120px;
+        max-width: 150px;
     }
 
     .navbar--scrolled .navbar-logo img {
-        height: 30px;
+        height: 42px;
+        max-width: 66px;
     }
 }

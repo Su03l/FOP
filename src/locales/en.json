@@ -1,7 +1,7 @@
 {
-  "homeTitle": "FOP - Industrial Safety Helmets",
+  "homeTitle": "Foundations of Prevention Factory – FOP",
   "home": "Home",
-  "about": "About Us",
+  "about": "About",
   "products": "Products",
   "ordering": "Order",
   "certifications": "Quality",
@@ -13,7 +13,7 @@
   "heroSubtitle": "Saudi-made industrial safety helmets designed to meet international standards.",
   "browseProducts": "Browse Products",
   "requestAQuote": "Request a Quote",
-  "companyOverview": "FOP Foundations of Prevention",
+  "companyOverview": "Foundations of Prevention Factory – FOP",
   "companyDescription": "Located in the Kingdom of Saudi Arabia, FOP is specialized in manufacturing high-performance safety helmets that combine durability, comfort, and modern design. We are proud to serve the construction, oil and gas, and industrial sectors with world-class head protection solutions.",
   "learnMore": "Learn More",
   "featuredProducts": "Featured Products",
@@ -88,12 +88,12 @@
   "product3Color": "Yellow",
   "product3Specs": "High-visibility thermoplastic, comfort padding, universal size",
   "viewAllProducts": "View All Products",
-  "footerAboutTitle": "FOP",
+  "footerAboutTitle": "Foundations of Prevention Factory – FOP\nمصنع أسس الوقاية للصناعة",
   "footerAboutDesc": "Foundations of Prevention. A leading Saudi manufacturer of personal protective equipment (PPE), focused on head protection solutions for industrial environments.",
   "footerQuickLinks": "Quick Links",
   "footerContactTitle": "Contact Info",
   "footerAddress": "New Industrial City, Madinah, KSA",
-  "footerPhone": "+966-5-XXXXXXX",
+  "footerPhone": "+966 53 000 5645",
   "footerEmail": "info@fop.com.sa",
   "footerFollowUs": "Follow Us",
   "aboutHeroTitle": "About FOP - Foundations of Prevention",
@@ -142,6 +142,7 @@
   "sweatband": "Sweatband",
   "color": "Color",
   "colorAll": "All",
+  "colorWhite": "White",
   "colorOrange": "Orange",
   "colorRed": "Red",
   "colorGreen": "Green",
@@ -278,7 +279,7 @@
   "contactAddressValue": "New Industrial City, Madinah\nKingdom of Saudi Arabia",
 
   "contactPhoneLabel": "Phone",
-  "contactPhoneValue": "+966-5-XXXXXXX",
+  "contactPhoneValue": "+966 53 000 5645",
 
   "contactEmailLabel": "Email",
   "contactEmailValue": "info@fop.com.sa",
@@ -306,4 +307,7 @@
   "orderSubtitle": "Choose how you'd like to contact us to place your order.",
   "orderNowTitle": "Order Now",
   "orderNowSubtitle": "You can reach us via phone or email."
+  
+
+
 }
