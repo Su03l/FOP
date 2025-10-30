@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css';
 import LogoSrc from '../../assets/images/banners/LOGO-13.png'
+import LogoDark from '../../assets/images/banners/logo-dark.png'
 
 
 const Navbar: React.FC = () => {
@@ -47,7 +48,7 @@ const Navbar: React.FC = () => {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => navigate('/')}>
-          <img src={LogoSrc} alt="FOP Logo" />
+          <img src={theme === 'light' ? LogoSrc : LogoDark} alt="FOP Logo" />
         </div>
 
         <div className={`nav-menu ${mobileMenuOpen ? 'nav-menu--open' : ''}`}>
